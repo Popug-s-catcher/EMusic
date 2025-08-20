@@ -7,7 +7,9 @@
         x:Class="EMusic.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="EMusic">
+        Title="EMusic"
+	    TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -16,18 +18,25 @@
     </Design.DataContext>
 
     <DockPanel>
-		<Border Height="80" Background="SkyBlue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+		<Border Height="80" Background="#3C736D" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
             <TextBlock Foreground="Black">Instruments</TextBlock>
         </Border>
-        <Border Width="80" Background="PaleGreen" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
-            <TextBlock Foreground="Black">Side panel</TextBlock>
+        <Border Width="80" Background="#3C736D" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
+            <StackPanel>
+			    <TextBlock>local</TextBlock>
+				<TextBlock>cloud</TextBlock>
+			</StackPanel>
         </Border>
         <DockPanel>
-		    <Border Height="94" Background="Blue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Bottom">
+		    <Border Height="94" Background="#3C736D" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Bottom">
                 <TextBlock Foreground="Black">Player</TextBlock>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
-                <TextBlock Foreground="Black">Songs list</TextBlock>
+            <Border Background="#804C6D69" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                <ScrollViewer >
+                    <!-- This ItemsControl show all added songs. -->
+                    <ItemsControl>
+                    </ItemsControl>
+                </ScrollViewer>
             </Border>
 	    </DockPanel>
 	</DockPanel>
