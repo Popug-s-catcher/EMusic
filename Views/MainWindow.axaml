@@ -15,6 +15,21 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <DockPanel>
+		<Border Height="80" Background="SkyBlue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+            <TextBlock Foreground="Black">Instruments</TextBlock>
+        </Border>
+        <Border Width="80" Background="PaleGreen" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
+            <TextBlock Foreground="Black">Side panel</TextBlock>
+        </Border>
+        <DockPanel>
+		    <Border Height="94" Background="Blue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Bottom">
+                <TextBlock Foreground="Black">Player</TextBlock>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                <TextBlock Foreground="Black">Songs list</TextBlock>
+            </Border>
+	    </DockPanel>
+	</DockPanel>
 
 </Window>
